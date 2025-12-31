@@ -41,29 +41,25 @@ public class Console {
         }
     }
 
-    public String prologue(){
-        ArrayList<String> list = new ArrayList<>();
+    public void prologue(){
         try(BufferedReader br = new BufferedReader(new FileReader("prologue.txt"))){
             String line = "";
             while((line = br.readLine())!=null){
-                list.add(line);
+                System.out.println(line);
             }
-            return list.toString();
         }catch (Exception e){
-            return "Mistake during reading.";
+             System.out.println("Mistake during reading.");
         }
     }
 
-    public String ending0(){
-        ArrayList<String> list = new ArrayList<>();
+    public void ending0(){
         try(BufferedReader br = new BufferedReader(new FileReader("Ending0.txt"))){
             String line = "";
             while((line = br.readLine())!=null){
-                list.add(line);
+                System.out.println(line);
             }
-            return list.toString();
         }catch (Exception e){
-            return "Mistake during reading.";
+            System.out.println("Mistake during reading.");
         }
     }
 
