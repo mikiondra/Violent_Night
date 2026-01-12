@@ -5,4 +5,9 @@ public class Boat implements Item {
     public String name() {
         return "Boat";
     }
+
+    @Override
+    public void use() {
+
+    }
 }

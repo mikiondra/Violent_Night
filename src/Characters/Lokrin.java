@@ -5,4 +5,9 @@ public class Lokrin implements Character {
     public String name() {
         return "Lokrin";
     }
+
+    @Override
+    public String talk() {
+        return "";
+    }
 }

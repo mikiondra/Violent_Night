@@ -5,4 +5,9 @@ public class Fidly_the_Mean implements Character {
     public String name() {
         return "Fidly the Mean";
     }
+
+    @Override
+    public String talk() {
+        return "";
+    }
 }

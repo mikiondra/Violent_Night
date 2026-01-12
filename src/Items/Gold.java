@@ -5,4 +5,11 @@ public class Gold implements Item {
     public String name() {
         return "Gold";
     }
+
+    @Override
+    public void use() {
+
+    }
+
+
 }

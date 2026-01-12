@@ -5,4 +5,9 @@ public class Fishing_rod implements Item {
     public String name() {
         return "Fishing rod";
     }
+
+    @Override
+    public void use() {
+
+    }
 }

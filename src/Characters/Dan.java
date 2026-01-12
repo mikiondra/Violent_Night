@@ -6,4 +6,9 @@ public class Dan implements Character{
     public String name() {
         return "Dan";
     }
+
+    @Override
+    public String talk() {
+        return "";
+    }
 }

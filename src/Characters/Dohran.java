@@ -5,4 +5,9 @@ public class Dohran implements Character {
     public String name() {
         return "Dohran";
     }
+
+    @Override
+    public String talk() {
+        return "";
+    }
 }

@@ -5,4 +5,9 @@ public class Potion_of_blindness implements Item {
     public String name() {
         return "Potion of Blindness";
     }
+
+    @Override
+    public void use() {
+
+    }
 }
