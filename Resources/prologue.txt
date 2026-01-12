@@ -6,6 +6,6 @@ And thus Plirchin decides to go on adventure to see aurora borealis above the la
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 You as player takes role of Plirchin.
 Your goal is to do get on the lake.
-Commands.Explore locations, talk with characters, complete their wishes, pick items and find your way to the lake.
+Explore locations, talk with characters, complete their wishes, pick items and find your way to the lake.
 You begin now........
 
