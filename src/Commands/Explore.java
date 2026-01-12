@@ -1,9 +1,11 @@
-public class Pick implements Command{
+package Commands;
+
+public class Explore implements Command {
 
 
     @Override
     public String execute() {
-        return "Picks a item.";
+        return "Explores a location.";
     }
 
     @Override

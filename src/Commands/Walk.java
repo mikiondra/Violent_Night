@@ -1,9 +1,11 @@
-public class Talk implements Command{
+package Commands;
+
+public class Walk implements Command {
 
 
     @Override
     public String execute() {
-        return "Talks with a character.";
+        return "You can walk.";
     }
 
     @Override

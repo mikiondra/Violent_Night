@@ -1,4 +1,6 @@
-public class End implements Command{
+package Commands;
+
+public class End implements Command {
 
 
     @Override

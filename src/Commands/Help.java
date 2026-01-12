@@ -1,9 +1,11 @@
-public class Walk implements Command{
+package Commands;
+
+public class Help implements Command {
 
 
     @Override
     public String execute() {
-        return "You can walk.";
+        return "walk,end,help,tip,pick,drop,use,talk,explore";
     }
 
     @Override

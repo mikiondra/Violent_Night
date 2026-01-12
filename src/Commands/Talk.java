@@ -1,9 +1,11 @@
-public class Drop implements Command{
+package Commands;
+
+public class Talk implements Command {
 
 
     @Override
     public String execute() {
-        return "Drops a item.";
+        return "Talks with a character.";
     }
 
     @Override

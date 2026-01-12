@@ -1,7 +1,7 @@
+import Commands.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -31,18 +31,18 @@ public class Console {
 
     public void execute(){
         System.out.println("Type 'help', to see all available commands.");
-        String command = sc.next();
+        String command =  sc.next();
         command = command.trim().toLowerCase();
         if (commands.containsKey(command)){
             System.out.println(">> " + commands.get(command).execute());
             isExit = commands.get(command).exit();
         }else{
-            System.out.println("Wrong command.");
+            System.out.println(">> Wrong command.");
         }
     }
 
     public void prologue(){
-        try(BufferedReader br = new BufferedReader(new FileReader("prologue.txt"))){
+        try(BufferedReader br = new BufferedReader(new FileReader("Resources/prologue.txt"))){
             String line = "";
             while((line = br.readLine())!=null){
                 System.out.println(line);
@@ -53,7 +53,7 @@ public class Console {
     }
 
     public void ending0(){
-        try(BufferedReader br = new BufferedReader(new FileReader("Ending0.txt"))){
+        try(BufferedReader br = new BufferedReader(new FileReader("Resources/Ending0.txt"))){
             String line = "";
             while((line = br.readLine())!=null){
                 System.out.println(line);

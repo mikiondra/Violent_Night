@@ -1,9 +1,11 @@
-public class Tip implements Command{
+package Commands;
+
+public class Use implements Command {
 
 
     @Override
     public String execute() {
-        return "Helps with actual problem.";
+        return "Uses a item.";
     }
 
     @Override
