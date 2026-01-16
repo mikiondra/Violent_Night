@@ -4,7 +4,7 @@ public class The_Lake implements Locations{
 
     @Override
     public String name() {
-        return "";
+        return "The Lake";
     }
 
     @Override

@@ -4,7 +4,7 @@ public class The_Phantom_Forest implements Locations{
 
     @Override
     public String name() {
-        return "";
+        return "The Phantom Forest";
     }
 
     @Override

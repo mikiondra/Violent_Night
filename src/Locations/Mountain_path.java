@@ -5,7 +5,7 @@ public class Mountain_path implements Locations{
 
     @Override
     public String name() {
-        return "";
+        return "Mountain path";
     }
 
     @Override

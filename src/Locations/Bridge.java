@@ -5,7 +5,7 @@ public class Bridge implements Locations{
 
     @Override
     public String name() {
-        return "";
+        return "Bridge";
     }
 
     @Override

@@ -4,7 +4,7 @@ public class The_Cemetery implements Locations {
 
     @Override
     public String name() {
-        return "";
+        return "The Cemetery";
     }
 
     @Override

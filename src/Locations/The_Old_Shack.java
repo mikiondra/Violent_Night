@@ -4,7 +4,7 @@ public class The_Old_Shack implements Locations {
 
     @Override
     public String name() {
-        return "";
+        return "The Old Shack";
     }
 
     @Override

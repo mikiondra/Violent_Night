@@ -4,7 +4,7 @@ public class Forest_path implements Locations{
 
     @Override
     public String name() {
-        return "";
+        return "Forest path";
     }
 
     @Override

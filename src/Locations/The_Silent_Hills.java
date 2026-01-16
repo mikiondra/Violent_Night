@@ -4,7 +4,7 @@ public class The_Silent_Hills implements Locations{
 
     @Override
     public String name() {
-        return "";
+        return "The Silent Hills";
     }
 
     @Override
