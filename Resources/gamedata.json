@@ -4,7 +4,8 @@
         "id": "loc_0",
         "name": "Bridge",
         "explore": "Old and broken bridge across river.",
-        "neighbours": ["loc_8",null,"loc_5",null]
+        "neighbours": ["loc_8",null,"loc_5",null],
+        "lootTable": ["it_1"]
       },
       {
         "id": "loc_1",
@@ -34,25 +35,29 @@
         "id": "loc_5",
         "name": "The Old Shack",
         "explore": "Old and run down shack of former fisherman.",
-        "neighbours": ["loc_0",null,"loc_1","loc_3"]
+        "neighbours": ["loc_0",null,"loc_1","loc_3"],
+        "lootTable": ["it_0"]
       },
       {
         "id": "loc_6",
         "name" : "The Phantom Forest",
         "explore": "Misty and cloudy forest, where no one dares to walk though it.",
-        "neighbours": ["loc_1",null,null,null]
+        "neighbours": ["loc_1",null,null,null],
+        "lootTable": ["it_2"]
       },
       {
         "id": "loc_7",
         "name": "The Port",
         "explore": "Only function place within this area of country.",
-        "neighbours": ["loc_2",null,null,"loc_4"]
+        "neighbours": ["loc_2",null,null,"loc_4"],
+        "lootTable": ["it_4"]
       },
       {
         "id": "loc_8",
         "name": "The Silent Hills",
         "explore": "Hills where even single sound can't exist.",
-        "neighbours": [null,"loc_2","loc_0",null]
+        "neighbours": [null,"loc_2","loc_0",null],
+        "lootTable": ["it_3"]
       }
     ],
   "characters": [
@@ -79,6 +84,28 @@
       "name": "Dan",
       "homeLocation": "loc_7",
       "talk": "I am only one here around this time, because others fear of local myths."
+    }
+  ],
+  "items": [
+    {
+      "id": "it_0",
+      "name": "fishing rod"
+    },
+    {
+      "id": "it_1",
+      "name": "big fish"
+    },
+    {
+      "id": "it_2",
+      "name": "potion of blindness"
+    },
+    {
+      "id": "it_3",
+      "name": "gold"
+    },
+    {
+      "id": "it_4",
+      "name": "boat"
     }
   ]
 }

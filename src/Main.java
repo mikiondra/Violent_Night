@@ -4,6 +4,9 @@ public class Main{
         //zkouska funkci
         Map data = Map.loadGameDataFromResources("/gamedata.json");
         System.out.println("Locations: " + data.locations.size());
+        System.out.println("Locations: " + data.characters.size());
+        System.out.println("Locations: " + data.items.size());
+        System.out.println("Locations: " + data.locations.size());
         System.out.println("Start lokace: " + data.findLocation("loc_3").getName());
 
         Console c = new Console();
