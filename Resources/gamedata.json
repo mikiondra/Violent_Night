@@ -1,0 +1,84 @@
+{
+    "locations": [
+      {
+        "id": "loc_0",
+        "name": "Bridge",
+        "explore": "Old and broken bridge across river.",
+        "neighbours": ["loc_8",null,"loc_5",null]
+      },
+      {
+        "id": "loc_1",
+        "name": "Forest path",
+        "explore": "Path to forest.",
+        "neighbours": ["loc_5", null, "loc_6", null]
+      },
+      {
+        "id": "loc_2",
+        "name": "Mountain path",
+        "explore": "Path from mountains.",
+        "neighbours": [null,null,"loc_7","loc_8"]
+      },
+      {
+        "id": "loc_3",
+        "name": "The Cemetery",
+        "explore": "Place where dead walks once again.",
+        "neighbours": [null,"loc_5",null,null]
+      },
+      {
+        "id": "loc_4",
+        "name": "The Lake",
+        "explore": null,
+        "neighbours": [null,"loc_7",null,null]
+      },
+      {
+        "id": "loc_5",
+        "name": "The Old Shack",
+        "explore": "Old and run down shack of former fisherman.",
+        "neighbours": ["loc_0",null,"loc_1","loc_3"]
+      },
+      {
+        "id": "loc_6",
+        "name" : "The Phantom Forest",
+        "explore": "Misty and cloudy forest, where no one dares to walk though it.",
+        "neighbours": ["loc_1",null,null,null]
+      },
+      {
+        "id": "loc_7",
+        "name": "The Port",
+        "explore": "Only function place within this area of country.",
+        "neighbours": ["loc_2",null,null,"loc_4"]
+      },
+      {
+        "id": "loc_8",
+        "name": "The Silent Hills",
+        "explore": "Hills where even single sound can't exist.",
+        "neighbours": [null,"loc_2","loc_0",null]
+      }
+    ],
+  "characters": [
+    {
+      "id": "cha_0",
+      "name": "Lokrin",
+      "homeLocation": "loc_3",
+      "talk": "Go my friend, night isn't eternal."
+    },
+    {
+      "id": "cha_1",
+      "name": "Dohrin",
+      "homeLocation": "loc_6",
+      "talk": "Aurora borealis gives power to all creatures living here."
+    },
+    {
+      "id": "cha_2",
+      "name": "Fidly the Mean",
+      "homeLocation": "loc_8",
+      "talk": "That gold is only mine and mine!"
+    },
+    {
+      "id": "cha_3",
+      "name": "Dan",
+      "homeLocation": "loc_7",
+      "talk": "I am only one here around this time, because others fear of local myths."
+    }
+  ]
+}
