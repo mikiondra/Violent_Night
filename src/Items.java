@@ -1,3 +1,6 @@
+/**
+ * Class for item objects.
+ */
 public class Items {
 
     private String id;

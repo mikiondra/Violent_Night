@@ -1,3 +1,6 @@
+/**
+ * Class for NPC objects
+ */
 public class Characters {
 
     private String id;

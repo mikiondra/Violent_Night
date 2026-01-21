@@ -5,11 +5,16 @@ import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Class for running the game
+ */
 public class Console {
 
     private Scanner sc;
     private HashMap<String,Command> commands;
     private boolean isExit;
+    private Map world;
+    private Player p;
 
     public Console() {
         this.sc = new Scanner(System.in);
@@ -17,7 +22,11 @@ public class Console {
         this.isExit = false;
     }
 
+    /**
+     * Method for loading needed objects for the game
+     */
     public void initialization(){
+        world = Map.loadGameDataFromResources("/gamedata.json");
         commands.put("walk",new Walk());
         commands.put("end",new End());
         commands.put("help",new Help());
@@ -29,6 +38,9 @@ public class Console {
         commands.put("explore",new Explore());
     }
 
+    /**
+     * Method where are commands executed
+     */
     public void execute(){
         System.out.println("Type 'help', to see all available commands.");
         String command =  sc.next();
@@ -41,6 +53,9 @@ public class Console {
         }
     }
 
+    /**
+     * Method for reading prologue.txt
+     */
     public void prologue(){
         try(BufferedReader br = new BufferedReader(new FileReader("Resources/prologue.txt"))){
             String line = "";
@@ -52,6 +67,9 @@ public class Console {
         }
     }
 
+    /**
+     * Method for reading ending0.txt
+     */
     public void ending0(){
         try(BufferedReader br = new BufferedReader(new FileReader("Resources/Ending0.txt"))){
             String line = "";
@@ -63,6 +81,9 @@ public class Console {
         }
     }
 
+    /**
+     * Method for reading ending1.txt
+     */
     public void ending1(){
         try(BufferedReader br = new BufferedReader(new FileReader("Resources/Ending1.txt"))){
             String line = "";
@@ -74,6 +95,9 @@ public class Console {
         }
     }
 
+    /**
+     * Method where the game runs
+     */
     public void start(){
         initialization();
         prologue();

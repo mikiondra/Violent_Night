@@ -5,13 +5,20 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import com.google.gson.Gson;
 
+/**
+ * Class for handling world of the game
+ */
 public class Map {
 
    public ArrayList<Locations> locations;
    public ArrayList<Characters> characters;
    public ArrayList<Items> items;
 
-
+    /**
+     * Method for reading JSON file
+     * @param resourcePath way to JSON file
+     * @return saves data from JSON to this class for further operations
+     */
    public static Map loadGameDataFromResources(String resourcePath){
       Gson gson = new Gson();
       try(InputStream is = Main.class.getResourceAsStream(resourcePath)){
@@ -24,6 +31,11 @@ public class Map {
       }
    }
 
+    /**
+     * Method for finding if dedicated location exists
+     * @param id number of dedicated location
+     * @return correct location
+     */
    public Locations findLocation(String id){
        for(Locations l : locations){
            if(l.getId().equals(id)){

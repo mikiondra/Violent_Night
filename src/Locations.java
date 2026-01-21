@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * Class for locations objects
+ */
 public class Locations {
 
     private String id;
