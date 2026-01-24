@@ -1,3 +1,5 @@
+package Game;
+
 import Commands.*;
 
 import java.io.BufferedReader;
@@ -14,7 +16,7 @@ public class Console {
     private HashMap<String,Command> commands;
     private boolean isExit;
     private Map world;
-    private Player p;
+    private Player player;
 
     public Console() {
         this.sc = new Scanner(System.in);
@@ -26,27 +28,28 @@ public class Console {
      * Method for loading needed objects for the game
      */
     public void initialization(){
+        commands = new HashMap<>();
         world = Map.loadGameDataFromResources("/gamedata.json");
-        commands.put("walk",new Walk());
+        commands.put("walk",new Walk(player));
         commands.put("end",new End());
         commands.put("help",new Help());
         commands.put("tip",new Tip());
-        commands.put("pick",new Pick());
-        commands.put("drop",new Drop());
-        commands.put("use",new Use());
-        commands.put("talk",new Talk());
-        commands.put("explore",new Explore());
+        commands.put("pick",new Pick(player));
+        commands.put("drop",new Drop(player));
+        commands.put("use",new Use(player));
+        commands.put("talk",new Talk(world));
+        commands.put("explore",new Explore(world));
     }
 
     /**
      * Method where are commands executed
      */
     public void execute(){
-        System.out.println("Type 'help', to see all available commands.");
+        System.out.println(">> " + "What are you gonna do? If you don't know, type 'help', to see all available commands.");
         String command =  sc.next();
         command = command.trim().toLowerCase();
         if (commands.containsKey(command)){
-            System.out.println(">> " + commands.get(command).execute());
+            System.out.println(">> " + commands.get(command).execute(command));
             isExit = commands.get(command).exit();
         }else{
             System.out.println(">> Wrong command.");

@@ -1,8 +1,10 @@
-import java.awt.image.CropImageFilter;
+package Game;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+
 import com.google.gson.Gson;
 
 /**
@@ -21,7 +23,7 @@ public class Map {
      */
    public static Map loadGameDataFromResources(String resourcePath){
       Gson gson = new Gson();
-      try(InputStream is = Main.class.getResourceAsStream(resourcePath)){
+      try(InputStream is = Map.class.getResourceAsStream(resourcePath)){
           if(is == null){
               throw new IllegalStateException("File not found: " + resourcePath);
           }

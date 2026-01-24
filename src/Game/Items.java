@@ -1,3 +1,5 @@
+package Game;
+
 /**
  * Class for item objects.
  */
@@ -16,7 +18,7 @@ public class Items {
 
     @Override
     public String toString() {
-        return "Items{" +
+        return "Game.Items{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 '}';

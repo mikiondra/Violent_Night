@@ -1,3 +1,5 @@
+package Game;
+
 import java.util.ArrayList;
 
 /**
@@ -19,9 +21,13 @@ public class Locations {
         return name;
     }
 
+    public String getExplore() {
+        return explore;
+    }
+
     @Override
     public String toString() {
-        return "Locations{" +
+        return "Game.Locations{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", explore='" + explore + '\'' +

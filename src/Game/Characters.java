@@ -1,3 +1,5 @@
+package Game;
+
 /**
  * Class for NPC objects
  */
@@ -16,9 +18,13 @@ public class Characters {
         return name;
     }
 
+    public String getTalk() {
+        return talk;
+    }
+
     @Override
     public String toString() {
-        return "Characters{" +
+        return "Game.Characters{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", homeLocation='" + homeLocation + '\'' +

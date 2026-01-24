@@ -1,10 +1,25 @@
 package Commands;
 
+import Game.Player;
+
+/**
+ * Class for picking items
+ */
 public class Pick implements Command {
 
+    private Player p;
 
+    public Pick(Player p) {
+        this.p = p;
+    }
+
+    /**
+     * Method for picking items
+     * @param command for making executes possible
+     * @return text informing player about picking item
+     */
     @Override
-    public String execute() {
+    public String execute(String command) {
         return "Picks a item.";
     }
 

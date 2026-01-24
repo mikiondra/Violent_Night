@@ -1,10 +1,25 @@
 package Commands;
+import Game.Player;
 
+/**
+ *  Class fow walking within game map
+ */
 public class Walk implements Command {
 
+  private Player p;
 
+    public Walk(Player p) {
+        this.p = p;
+    }
+
+    /**
+     * Method for walking within game map
+     * @param command for making executes possible
+     * @return text informing player about moving
+     */
     @Override
-    public String execute() {
+    public String execute(String command) {
+        //TODO walking
         return "You can walk.";
     }
 
