@@ -35,7 +35,7 @@ public class Map {
 
     /**
      * Method for finding if dedicated location exists
-     * @param id number of dedicated location
+     * @param id String of dedicated location
      * @return correct location
      */
    public Locations findLocation(String id){
@@ -46,4 +46,19 @@ public class Map {
        }
        throw new IllegalArgumentException("Location doesn't exist: " + id);
    }
+
+    /**
+     * Method for finding if dedicated character exists in their homeLocation
+     * @param homeLocation String of dedicated location of the character
+     * @return correct character
+     */
+   public Characters findCharacter(String homeLocation){
+       for(Characters ch : characters){
+           if(ch.getHomeLocation().equals(homeLocation)){
+               return ch;
+           }
+       }
+       throw new IllegalArgumentException("Character doesn't exist: " + homeLocation);
+   }
+
 }

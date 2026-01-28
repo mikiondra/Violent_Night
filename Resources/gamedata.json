@@ -28,7 +28,7 @@
       {
         "id": "loc_4",
         "name": "The Lake",
-        "explore": null,
+        "explore": "Aurora borealis flows above this place of water.",
         "neighbours": [null,"loc_7",null,null]
       },
       {
@@ -65,25 +65,25 @@
       "id": "cha_0",
       "name": "Lokrin",
       "homeLocation": "loc_3",
-      "talk": "Go my friend, night isn't eternal."
+      "talk": "Lokrin: Go my friend, night isn't eternal."
     },
     {
       "id": "cha_1",
       "name": "Dohrin",
       "homeLocation": "loc_6",
-      "talk": "Aurora borealis gives power to all creatures living here."
+      "talk": "Dohrin: Aurora borealis gives power to all creatures living here."
     },
     {
       "id": "cha_2",
       "name": "Fidly the Mean",
       "homeLocation": "loc_8",
-      "talk": "That gold is only mine and mine!"
+      "talk": "Fidly: That gold is only mine and mine!"
     },
     {
       "id": "cha_3",
       "name": "Dan",
       "homeLocation": "loc_7",
-      "talk": "I am only one here around this time, because others fear of local myths."
+      "talk": "Dan: I am only one here around this time, because others fear of local myths."
     }
   ],
   "items": [

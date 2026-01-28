@@ -25,6 +25,14 @@ public class Locations {
         return explore;
     }
 
+    public ArrayList<String> getNeighbours() {
+        return neighbours;
+    }
+
+    public ArrayList<String> getLootTable() {
+        return lootTable;
+    }
+
     @Override
     public String toString() {
         return "Game.Locations{" +

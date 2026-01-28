@@ -7,10 +7,10 @@ import Game.Player;
  */
 public class Pick implements Command {
 
-    private Player p;
+    private Player player;
 
-    public Pick(Player p) {
-        this.p = p;
+    public Pick(Player player) {
+        this.player = player;
     }
 
     /**

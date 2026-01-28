@@ -7,10 +7,10 @@ import Game.Map;
  */
 public class Explore implements Command {
 
-    private Map map;
+    private Map world;
 
-    public Explore(Map map) {
-        this.map = map;
+    public Explore(Map world) {
+        this.world = world;
     }
 
     /**
@@ -20,7 +20,7 @@ public class Explore implements Command {
      */
     @Override
     public String execute(String command) {
-        return "Explores a location.";
+        return world.findLocation("loc_3").getExplore();
     }
 
     @Override

@@ -7,10 +7,10 @@ import Game.Player;
  */
 public class Drop implements Command {
 
-    private Player p;
+    private Player player;
 
-    public Drop(Player p) {
-        this.p = p;
+    public Drop(Player player) {
+        this.player = player;
     }
 
     /**

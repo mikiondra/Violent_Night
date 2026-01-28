@@ -22,6 +22,10 @@ public class Characters {
         return talk;
     }
 
+    public String getHomeLocation() {
+        return homeLocation;
+    }
+
     @Override
     public String toString() {
         return "Game.Characters{" +

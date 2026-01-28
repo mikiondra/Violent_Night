@@ -6,10 +6,10 @@ import Game.Player;
  */
 public class Walk implements Command {
 
-  private Player p;
+  private Player player;
 
-    public Walk(Player p) {
-        this.p = p;
+    public Walk(Player player) {
+        this.player = player;
     }
 
     /**
@@ -20,6 +20,7 @@ public class Walk implements Command {
     @Override
     public String execute(String command) {
         //TODO walking
+       
         return "You can walk.";
     }
 
@@ -27,4 +28,5 @@ public class Walk implements Command {
     public boolean exit() {
         return false;
     }
+
 }

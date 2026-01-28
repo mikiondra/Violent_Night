@@ -4,16 +4,14 @@ import Game.Map;
 public class Main{
     public static void main(String[] args){
 
-        //zkouska funkci
+    //zkouska funkci
         Map data = Map.loadGameDataFromResources("/gamedata.json");
         System.out.println("Game.Locations: " + data.locations.size());
-        System.out.println("Game.Locations: " + data.characters.size());
-        System.out.println("Game.Locations: " + data.items.size());
-        System.out.println("Game.Locations: " + data.locations.size());
-        System.out.println("Start lokace: " + data.findLocation("loc_3").getName());
+        System.out.println("Game.Characters: " + data.characters.size());
+        System.out.println("Game.Items: " + data.items.size());
+        System.out.println("Start location: " + data.findLocation("loc_3").getName());
 
-        Console c = new Console();
-        c.start();
-
-    }
+    Console c = new Console();
+    c.start();
+  }
 }
