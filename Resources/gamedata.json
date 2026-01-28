@@ -11,25 +11,29 @@
         "id": "loc_1",
         "name": "Forest path",
         "explore": "Path to forest.",
-        "neighbours": ["loc_5", null, "loc_6", null]
+        "neighbours": ["loc_5", null, "loc_6", null],
+        "lootTable": null
       },
       {
         "id": "loc_2",
         "name": "Mountain path",
         "explore": "Path from mountains.",
-        "neighbours": [null,null,"loc_7","loc_8"]
+        "neighbours": [null,null,"loc_7","loc_8"],
+        "lootTable": null
       },
       {
         "id": "loc_3",
         "name": "The Cemetery",
         "explore": "Place where dead walks once again.",
-        "neighbours": [null,"loc_5",null,null]
+        "neighbours": [null,"loc_5",null,null],
+        "lootTable": null
       },
       {
         "id": "loc_4",
         "name": "The Lake",
         "explore": "Aurora borealis flows above this place of water.",
-        "neighbours": [null,"loc_7",null,null]
+        "neighbours": [null,"loc_7",null,null],
+        "lootTable": null
       },
       {
         "id": "loc_5",
@@ -84,6 +88,36 @@
       "name": "Dan",
       "homeLocation": "loc_7",
       "talk": "Dan: I am only one here around this time, because others fear of local myths."
+    },
+    {
+      "id": "cha_4a",
+      "name": "Kibblim",
+      "homeLocation": "loc_0",
+      "talk": "The big fish must be somewhere around here."
+    },
+    {
+      "id": "cha_4b",
+      "name": "Kibblim",
+      "homeLocation": "loc_1",
+      "talk": "Path to spoooky forest."
+    },
+    {
+      "id": "cha_4c",
+      "name": "Kibblim",
+      "homeLocation": "loc_2",
+      "talk": "This way leads to only port around here."
+    },
+    {
+      "id": "cha_4d",
+      "name": "Kibblim",
+      "homeLocation": "loc_4",
+      "talk": "Big amount of water."
+    },
+    {
+      "id": "cha_4e",
+      "name": "Kibblim",
+      "homeLocation": "loc_5",
+      "talk": "The view on the lake is good here."
     }
   ],
   "items": [

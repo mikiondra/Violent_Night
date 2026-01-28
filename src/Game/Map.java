@@ -61,4 +61,17 @@ public class Map {
        throw new IllegalArgumentException("Character doesn't exist: " + homeLocation);
    }
 
+    /**
+     * Method for finding is dedicated item exists
+     * @param id String of dedicated item
+     * @return correct item
+     */
+    public Items findItem(String id){
+        for(Items i : items){
+            if(i.getId().equals(id)){
+                return i;
+            }
+        }
+        throw new IllegalArgumentException("Item doesn't exist: " + id);
+    }
 }

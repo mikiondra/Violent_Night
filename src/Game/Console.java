@@ -30,7 +30,7 @@ public class Console {
     public void initialization(){
         commands = new HashMap<>();
         world = Map.loadGameDataFromResources("/gamedata.json");
-        commands.put("walk",new Walk(player));
+        commands.put("walk",new Walk(player, world));
         commands.put("end",new End());
         commands.put("help",new Help());
         commands.put("tip",new Tip());

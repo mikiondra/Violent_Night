@@ -1,4 +1,5 @@
 package Commands;
+import Game.Map;
 import Game.Player;
 
 /**
@@ -7,9 +8,11 @@ import Game.Player;
 public class Walk implements Command {
 
   private Player player;
+  private Map world;
 
-    public Walk(Player player) {
+    public Walk(Player player, Map world) {
         this.player = player;
+        this.world = world;
     }
 
     /**
@@ -20,7 +23,7 @@ public class Walk implements Command {
     @Override
     public String execute(String command) {
         //TODO walking
-       
+
         return "You can walk.";
     }
 
