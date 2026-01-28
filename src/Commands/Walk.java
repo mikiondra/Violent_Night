@@ -23,13 +23,11 @@ public class Walk implements Command {
     @Override
     public String execute(String command) {
         //TODO walking
-
-        return "You can walk.";
+        return "You walked";
     }
 
     @Override
     public boolean exit() {
         return false;
     }
-
 }

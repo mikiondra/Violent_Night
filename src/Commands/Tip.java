@@ -23,8 +23,9 @@ public class Tip implements Command {
                 return "Game is in two parts: Southwestern is first and northeastern is second. Don't go to second part until you are done in first.";
             case 2:
                 return "Shack -> Rod -> Bridge -> Fish -> Dohran -> Potion -> Fidly -> Gold -> Dan -> Boat -> Lake";
+            default:
+                return "Tips don't work lmao";
         }
-        return null;
     }
 
     @Override
