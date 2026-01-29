@@ -1,6 +1,7 @@
 package Commands;
 
 import Game.Map;
+import Game.Player;
 
 /**
  * Class for talking with NPCs
@@ -8,9 +9,11 @@ import Game.Map;
 public class Talk implements Command {
 
     private Map world;
+    private Player player;
 
-    public Talk(Map world) {
+    public Talk(Map world, Player player) {
         this.world = world;
+        this.player = player;
     }
 
     /**
@@ -20,7 +23,7 @@ public class Talk implements Command {
      **/
     @Override
     public String execute(String command) {
-        return world.findCharacter("loc_0").getTalk();
+        return world.findCharacter(player.getLocation().getId()).getTalk();
     }
 
      @Override

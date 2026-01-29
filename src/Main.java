@@ -1,4 +1,5 @@
 import Game.Console;
+import Game.Locations;
 import Game.Map;
 
 public class Main{
@@ -9,7 +10,7 @@ public class Main{
         System.out.println("Game.Locations: " + data.locations.size());
         System.out.println("Game.Characters: " + data.characters.size());
         System.out.println("Game.Items: " + data.items.size());
-        System.out.println("Start location: " + data.findLocation("loc_3").getName());
+        System.out.println("Start location: " + data.findLocation("cemetery").getName());
 
     Console c = new Console();
     c.start();

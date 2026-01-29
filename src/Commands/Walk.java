@@ -1,6 +1,9 @@
 package Commands;
+import Game.Locations;
 import Game.Map;
 import Game.Player;
+
+import java.util.Scanner;
 
 /**
  *  Class fow walking within game map
@@ -9,10 +12,12 @@ public class Walk implements Command {
 
   private Player player;
   private Map world;
+  private Locations location;
 
-    public Walk(Player player, Map world) {
+    public Walk(Player player, Map world, Locations location) {
         this.player = player;
         this.world = world;
+        this.location = location;
     }
 
     /**
@@ -23,7 +28,11 @@ public class Walk implements Command {
     @Override
     public String execute(String command) {
         //TODO walking
-        return "You walked";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Which way are you going?");
+        String way = sc.next();
+        way = way.trim().toLowerCase();
+        return "Walking doesn't work lmao.";
     }
 
     @Override

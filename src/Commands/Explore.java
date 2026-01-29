@@ -1,6 +1,8 @@
 package Commands;
 
+import Game.Locations;
 import Game.Map;
+import Game.Player;
 
 /**
  * Class for exploring game locations
@@ -8,9 +10,11 @@ import Game.Map;
 public class Explore implements Command {
 
     private Map world;
+    private Player player;
 
-    public Explore(Map world) {
+    public Explore(Map world, Player player) {
         this.world = world;
+        this.player = player;
     }
 
     /**
@@ -20,7 +24,7 @@ public class Explore implements Command {
      */
     @Override
     public String execute(String command) {
-        return world.findLocation("loc_3").getExplore();
+        return world.findLocation(player.getLocation().getId()).getExplore();
     }
 
     @Override

@@ -12,7 +12,7 @@ public class Help implements Command {
      */
     @Override
     public String execute(String command) {
-        return "Possible actions: walk,end,help,tip,pick,drop,use,talk,explore";
+        return "Possible actions: walk,end,help,tip,pick,drop,use,talk,explore,map";
     }
 
     @Override

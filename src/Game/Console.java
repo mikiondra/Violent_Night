@@ -17,6 +17,7 @@ public class Console {
     private boolean isExit;
     private Map world;
     private Player player;
+    private Locations location;
 
     public Console() {
         this.sc = new Scanner(System.in);
@@ -29,16 +30,21 @@ public class Console {
      */
     public void initialization(){
         commands = new HashMap<>();
+        player = new Player();
+        //starting location
+        location = new Locations("cemetery");
         world = Map.loadGameDataFromResources("/gamedata.json");
-        commands.put("walk",new Walk(player, world));
+        player.setLocation(location);
+        commands.put("walk",new Walk(player, world, location));
         commands.put("end",new End());
         commands.put("help",new Help());
         commands.put("tip",new Tip());
         commands.put("pick",new Pick(player));
         commands.put("drop",new Drop(player));
         commands.put("use",new Use(player));
-        commands.put("talk",new Talk(world));
-        commands.put("explore",new Explore(world));
+        commands.put("talk",new Talk(world,player));
+        commands.put("explore",new Explore(world,player));
+        commands.put("map",new Plan());
     }
 
     /**
@@ -49,7 +55,9 @@ public class Console {
         String command =  sc.next();
         command = command.trim().toLowerCase();
         if (commands.containsKey(command)){
+            System.out.println();
             System.out.println(">> " + commands.get(command).execute(command));
+            System.out.println();
             isExit = commands.get(command).exit();
         }else{
             System.out.println(">> Wrong command.");

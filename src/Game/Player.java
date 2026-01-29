@@ -7,6 +7,9 @@ public class Player {
 
     private Locations location;
 
+    public Player() {
+    }
+
     public void setLocation(Locations location){
       this.location = location;
     }

@@ -1,0 +1,17 @@
+MAP of the WORLD    [   hills      ]
+by KIBBLIMS         ^            ^
+                    |            |
+                    ⌄            ⌄
+                 [bridge]        [path2]
+                  ^                    ^
+                  |                    |
+                  ⌄                    ⌄
+[cemetery]  <-> [shack]   [lake] <-> [port]
+                ^
+                |
+                ⌄
+              [path1]
+                ^
+                |
+                ⌄
+              [forest]
