@@ -8,6 +8,10 @@ public class Items {
     private String id;
     private String name;
 
+    public Items(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }

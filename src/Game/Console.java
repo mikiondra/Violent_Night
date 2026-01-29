@@ -18,6 +18,7 @@ public class Console {
     private Map world;
     private Player player;
     private Locations location;
+    private Items item;
 
     public Console() {
         this.sc = new Scanner(System.in);
@@ -34,16 +35,18 @@ public class Console {
         location = new Locations("cemetery");
         world = Map.loadGameDataFromResources("/gamedata.json");
         player.setLocation(location);
+        player.setHands(null);
         commands.put("walk",new Walk(player, world, location));
         commands.put("end",new End());
         commands.put("help",new Help());
         commands.put("tip",new Tip());
-        commands.put("pick",new Pick(player));
-        commands.put("drop",new Drop(player));
+        commands.put("pick",new Pick(player,world));
+        commands.put("drop",new Drop(player,world));
         commands.put("use",new Use(player));
         commands.put("talk",new Talk(world,player));
         commands.put("explore",new Explore(world,player));
         commands.put("map",new Plan());
+        commands.put("list",new Things());
     }
 
     /**
@@ -51,7 +54,7 @@ public class Console {
      */
     public void execute(){
         System.out.println("You are at: " + world.findLocation(player.getLocation().getId()).getName());
-        System.out.println(">> " + "What are you gonna do? If you don't know, type 'help', to see all available commands.");
+        System.out.println(">> " + "What are you gonna do? If you don't know, type 'help', to see all available actions.");
         String command =  sc.next();
         command = command.trim().toLowerCase();
         if (commands.containsKey(command)){
@@ -60,7 +63,7 @@ public class Console {
             System.out.println();
             isExit = commands.get(command).exit();
         }else{
-            System.out.println(">> Wrong command.");
+            System.out.println(">> Wrong action.");
         }
     }
 

@@ -6,6 +6,7 @@ package Game;
 public class Player {
 
     private Locations location;
+    private Items hands;
 
     public Player() {
     }
@@ -16,6 +17,14 @@ public class Player {
 
     public Locations getLocation() {
         return location;
+    }
+
+    public Items getHands() {
+        return hands;
+    }
+
+    public void setHands(Items hands) {
+        this.hands = hands;
     }
 
     @Override

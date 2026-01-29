@@ -1,0 +1,17 @@
+LIST of  OBJECTS    [    gold    ]
+by KIBBLIMS         ^            ^
+                    |            |
+                    ⌄            ⌄
+                 [fish]        [null]
+                  ^                ^
+                  |                |
+                  ⌄                ⌄
+[null]  <-> [rod   ]   [null] <-> [boat]
+                ^
+                |
+                ⌄
+              [null]
+                ^
+                |
+                ⌄
+              [potion]

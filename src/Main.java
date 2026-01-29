@@ -10,7 +10,7 @@ public class Main{
         System.out.println("Game.Locations: " + data.locations.size());
         System.out.println("Game.Characters: " + data.characters.size());
         System.out.println("Game.Items: " + data.items.size());
-        System.out.println("Start location: " + data.findLocation("cemetery").getName());
+        System.out.println(data.findLocation("shack").getLootTable());
 
     Console c = new Console();
     c.start();

@@ -5,7 +5,7 @@
         "name": "Bridge",
         "explore": "Old and broken bridge across river.",
         "neighbours": ["hills","shack"],
-        "lootTable": ["it_1"]
+        "lootTable": ["fish"]
       },
       {
         "id": "path1",
@@ -40,81 +40,81 @@
         "name": "The Old Shack",
         "explore": "Old and run down shack of former fisherman.",
         "neighbours": ["bridge","path1","cemetery"],
-        "lootTable": ["it_0"]
+        "lootTable": ["rod"]
       },
       {
         "id": "forest",
         "name" : "The Phantom Forest",
         "explore": "Misty and cloudy forest, where no one dares to walk though it.",
         "neighbours": ["path1"],
-        "lootTable": ["it_2"]
+        "lootTable": ["potion"]
       },
       {
         "id": "port",
         "name": "The Port",
         "explore": "Only function place within this area of country.",
         "neighbours": ["path2","lake"],
-        "lootTable": ["it_4"]
+        "lootTable": ["boat"]
       },
       {
         "id": "hills",
         "name": "The Silent Hills",
         "explore": "Hills where even single sound can't exist.",
         "neighbours": ["path2","bridge"],
-        "lootTable": ["it_3"]
+        "lootTable": ["gold"]
       }
     ],
   "characters": [
     {
-      "id": "cha_0",
+      "id": "lokrin",
       "name": "Lokrin",
       "homeLocation": "cemetery",
       "talk": "Lokrin: Go my friend, night isn't eternal."
     },
     {
-      "id": "cha_1",
+      "id": "dohrin",
       "name": "Dohrin",
       "homeLocation": "forest",
       "talk": "Dohrin: Aurora borealis gives power to all creatures living here."
     },
     {
-      "id": "cha_2",
+      "id": "fidly",
       "name": "Fidly the Mean",
       "homeLocation": "hills",
       "talk": "Fidly: That gold is only mine and mine!"
     },
     {
-      "id": "cha_3",
+      "id": "dan",
       "name": "Dan",
       "homeLocation": "port",
       "talk": "Dan: I am only one here around this time, because others fear of local myths."
     },
     {
-      "id": "cha_4a",
+      "id": "kibblim1",
       "name": "Kibblim",
       "homeLocation": "bridge",
       "talk": "Kibblim: The big fish must be somewhere around here."
     },
     {
-      "id": "cha_4b",
+      "id": "kibblim2",
       "name": "Kibblim",
       "homeLocation": "path1",
       "talk": "Kibblim: Path to spoooky forest."
     },
     {
-      "id": "cha_4c",
+      "id": "kibblim3",
       "name": "Kibblim",
       "homeLocation": "path2",
       "talk": "Kibblim This way leads to only port around here."
     },
     {
-      "id": "cha_4d",
+      "id": "kibblim4",
       "name": "Kibblim",
       "homeLocation": "lake",
       "talk": "Kibblim: Big amount of water."
     },
     {
-      "id": "cha_4e",
+      "id": "kibblim5",
       "name": "Kibblim",
       "homeLocation": "shack",
       "talk": "Kibblim: The view on the lake is good here."
@@ -122,23 +122,23 @@
   ],
   "items": [
     {
-      "id": "it_0",
+      "id": "rod",
       "name": "fishing rod"
     },
     {
-      "id": "it_1",
+      "id": "fish",
       "name": "big fish"
     },
     {
-      "id": "it_2",
+      "id": "potion",
       "name": "potion of blindness"
     },
     {
-      "id": "it_3",
+      "id": "gold",
       "name": "gold"
     },
     {
-      "id": "it_4",
+      "id": "boat",
       "name": "boat"
     }
   ]

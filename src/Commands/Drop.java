@@ -1,5 +1,6 @@
 package Commands;
 
+import Game.Map;
 import Game.Player;
 
 /**
@@ -8,9 +9,11 @@ import Game.Player;
 public class Drop implements Command {
 
     private Player player;
+    private Map world;
 
-    public Drop(Player player) {
+    public Drop(Player player, Map world) {
         this.player = player;
+        this.world = world;
     }
 
     /**

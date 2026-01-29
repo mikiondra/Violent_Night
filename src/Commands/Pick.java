@@ -1,5 +1,8 @@
 package Commands;
 
+import Game.Items;
+import Game.Locations;
+import Game.Map;
 import Game.Player;
 
 /**
@@ -8,9 +11,13 @@ import Game.Player;
 public class Pick implements Command {
 
     private Player player;
+    private Map world;
+    private Items item;
+    private Locations location;
 
-    public Pick(Player player) {
+    public Pick(Player player, Map world) {
         this.player = player;
+        this.world = world;
     }
 
     /**
@@ -20,7 +27,15 @@ public class Pick implements Command {
      */
     @Override
     public String execute(String command) {
-        return "Picks a item.";
+        if(world.findLocation(player.getLocation().getId()).getLootTable() != null){
+            if(player.getHands() == null){
+                return "You picked item";
+            }else{
+                return "You have full hands.";
+            }
+        }else{
+            return "Nothing is here.";
+        }
     }
 
     @Override
