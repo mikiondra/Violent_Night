@@ -31,7 +31,6 @@ public class Console {
     public void initialization(){
         commands = new HashMap<>();
         player = new Player();
-        //starting location
         location = new Locations("cemetery");
         world = Map.loadGameDataFromResources("/gamedata.json");
         player.setLocation(location);
@@ -51,6 +50,7 @@ public class Console {
      * Method where are commands executed
      */
     public void execute(){
+        System.out.println("You are at: " + world.findLocation(player.getLocation().getId()).getName());
         System.out.println(">> " + "What are you gonna do? If you don't know, type 'help', to see all available commands.");
         String command =  sc.next();
         command = command.trim().toLowerCase();
