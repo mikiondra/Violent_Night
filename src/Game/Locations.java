@@ -37,6 +37,10 @@ public class Locations {
         return neighbours;
     }
 
+    public void setLootTable(ArrayList<String> lootTable) {
+        this.lootTable = lootTable;
+    }
+
     public ArrayList<String> getLootTable() {
         return lootTable;
     }

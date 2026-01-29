@@ -1,9 +1,9 @@
 package Commands;
 
 import Game.Items;
-import Game.Locations;
 import Game.Map;
 import Game.Player;
+import java.util.Scanner;
 
 /**
  * Class for picking items
@@ -13,7 +13,6 @@ public class Pick implements Command {
     private Player player;
     private Map world;
     private Items item;
-    private Locations location;
 
     public Pick(Player player, Map world) {
         this.player = player;
@@ -27,9 +26,20 @@ public class Pick implements Command {
      */
     @Override
     public String execute(String command) {
+        Scanner sc =new Scanner(System.in);
         if(world.findLocation(player.getLocation().getId()).getLootTable() != null){
             if(player.getHands() == null){
-                return "You picked item";
+                System.out.println("What item do you want?");
+                String thing = sc.next();
+                thing = thing.trim().toLowerCase();
+                if(world.findLocation(player.getLocation().getId()).getLootTable().contains(thing)){
+                    item = new Items(thing);
+                    player.setHands(item);
+                    world.findLocation(player.getLocation().getId()).setLootTable(null);
+                    return "You picked: " + world.findItem(player.getHands().getId()).getName();
+                }else{
+                   return "This item isn't here.";
+                }
             }else{
                 return "You have full hands.";
             }
