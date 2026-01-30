@@ -42,7 +42,7 @@ public class Console {
         commands.put("tip",new Tip());
         commands.put("pick",new Pick(player,world));
         commands.put("drop",new Drop(player,world));
-        commands.put("use",new Use(player));
+        commands.put("use",new Use(player,world));
         commands.put("talk",new Talk(world,player));
         commands.put("explore",new Explore(world,player));
         commands.put("map",new Plan());

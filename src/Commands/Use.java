@@ -1,5 +1,8 @@
 package Commands;
 
+import Game.Items;
+import Game.Locations;
+import Game.Map;
 import Game.Player;
 
 /**
@@ -8,8 +11,12 @@ import Game.Player;
 public class Use implements Command {
 
     private Player player;
+    private Map world;
+    private Items item;
+    private Locations location;
 
-    public Use(Player player) {
+    public Use(Player player, Map world) {
+        this.world = world;
         this.player = player;
     }
 
@@ -20,7 +27,12 @@ public class Use implements Command {
      */
     @Override
     public String execute(String command) {
-        return "Uses a item.";
+        //navrh jak by to mohlo fungovat
+        if(world.findItem(player.getHands().getId()).equals(new Items("boat")) && world.findLocation(player.getLocation().getId()).equals(new Locations("lake"))){
+            return "You completed demo.";
+        }else{
+            return "Nothing happened.";
+        }
     }
 
     @Override
