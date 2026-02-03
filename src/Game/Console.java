@@ -18,12 +18,13 @@ public class Console {
     private Map world;
     private Player player;
     private Locations location;
-    private Items item;
+    private boolean isLake;
 
     public Console() {
         this.sc = new Scanner(System.in);
         this.commands = new HashMap<>();
         this.isExit = false;
+        this.isLake = false;
     }
 
     /**
@@ -62,6 +63,7 @@ public class Console {
             System.out.println(">> " + commands.get(command).execute(command));
             System.out.println();
             isExit = commands.get(command).exit();
+            isLake = world.findLocation("lake").isEnding();
         }else{
             System.out.println(">> Wrong action.");
         }
@@ -118,7 +120,9 @@ public class Console {
         do{
             execute();
         }while(!isExit);
-        if(isExit){
+        if(isLake){
+            ending1();
+        }else{
             ending0();
         }
     }

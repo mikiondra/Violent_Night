@@ -12,6 +12,8 @@ public class Locations {
     private String explore;
     private ArrayList<String> neighbours;
     private ArrayList<String> lootTable;
+    private boolean available;
+    private boolean ending;
 
     public Locations(String id) {
         this.id = id;
@@ -41,18 +43,35 @@ public class Locations {
         this.lootTable = lootTable;
     }
 
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    public boolean isEnding() {
+        return ending;
+    }
+
+    public void setEnding(boolean ending) {
+        this.ending = ending;
+    }
+
     public ArrayList<String> getLootTable() {
         return lootTable;
     }
 
     @Override
     public String toString() {
-        return "Game.Locations{" +
+        return "Locations{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", explore='" + explore + '\'' +
                 ", neighbours=" + neighbours +
                 ", lootTable=" + lootTable +
+                ", available=" + available +
                 '}';
     }
 }

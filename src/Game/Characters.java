@@ -22,6 +22,10 @@ public class Characters {
         return talk;
     }
 
+    public void setTalk(String talk) {
+        this.talk = talk;
+    }
+
     public String getHomeLocation() {
         return homeLocation;
     }

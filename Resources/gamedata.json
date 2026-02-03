@@ -5,63 +5,65 @@
         "name": "Bridge",
         "explore": "Old and broken bridge across river.",
         "neighbours": ["hills","shack"],
-        "lootTable": ["fish"]
+        "lootTable": ["fish"],
+        "available": false
       },
       {
         "id": "path1",
         "name": "Forest path",
         "explore": "Path to forest.",
-        "neighbours": ["shack","hills"],
-        "lootTable": null
+        "neighbours": ["shack","forest"]
       },
       {
         "id": "path2",
         "name": "Mountain path",
         "explore": "Path from mountains.",
-        "neighbours": ["port","hills"],
-        "lootTable": null
+        "neighbours": ["port","hills"]
       },
       {
         "id": "cemetery",
         "name": "The Cemetery",
         "explore": "Place where dead walks once again.",
-        "neighbours": ["shack"],
-        "lootTable": null
+        "neighbours": ["shack"]
       },
       {
         "id": "lake",
         "name": "The Lake",
         "explore": "Aurora borealis flows above this place of water.",
         "neighbours": ["port"],
-        "lootTable": null
+        "ending": false
       },
       {
         "id": "shack",
         "name": "The Old Shack",
         "explore": "Old and run down shack of former fisherman.",
         "neighbours": ["bridge","path1","cemetery"],
-        "lootTable": ["rod"]
+        "lootTable": ["rod"],
+        "available": true
       },
       {
         "id": "forest",
         "name" : "The Phantom Forest",
         "explore": "Misty and cloudy forest, where no one dares to walk though it.",
         "neighbours": ["path1"],
-        "lootTable": ["potion"]
+        "lootTable": ["potion"],
+        "available": false
       },
       {
         "id": "port",
         "name": "The Port",
         "explore": "Only function place within this area of country.",
         "neighbours": ["path2","lake"],
-        "lootTable": ["boat"]
+        "lootTable": ["boat"],
+        "available": false
       },
       {
         "id": "hills",
         "name": "The Silent Hills",
         "explore": "Hills where even single sound can't exist.",
         "neighbours": ["path2","bridge"],
-        "lootTable": ["gold"]
+        "lootTable": ["gold"],
+        "available": false
       }
     ],
   "characters": [
@@ -75,7 +77,7 @@
       "id": "dohrin",
       "name": "Dohrin",
       "homeLocation": "forest",
-      "talk": "Dohrin: Aurora borealis gives power to all creatures living here."
+      "talk": "Dohrin: I can help you, but I firstly need some food."
     },
     {
       "id": "fidly",
@@ -87,7 +89,7 @@
       "id": "dan",
       "name": "Dan",
       "homeLocation": "port",
-      "talk": "Dan: I am only one here around this time, because others fear of local myths."
+      "talk": "Dan: That boat isn't free, you know?"
     },
     {
       "id": "kibblim1",

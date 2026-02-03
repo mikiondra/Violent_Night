@@ -32,7 +32,7 @@ public class Pick implements Command {
                 System.out.println("What item do you want?");
                 String thing = sc.next();
                 thing = thing.trim().toLowerCase();
-                if(world.findLocation(player.getLocation().getId()).getLootTable().contains(thing)){
+                if(world.findLocation(player.getLocation().getId()).getLootTable().contains(thing) && world.findLocation(player.getLocation().getId()).isAvailable()){
                     item = new Items(thing);
                     player.setHands(item);
                     world.findLocation(player.getLocation().getId()).setLootTable(null);
